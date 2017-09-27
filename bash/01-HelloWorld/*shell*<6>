@@ -1,0 +1,238 @@
+
+pdorwin@bubba - 17-09-27-15.15.36.552322301
+=> /git/pdorwin/scripting/bash/01-HelloWorld
+-> ls -l
+total 32
+-rw-r--r--. 1 pdorwin pdorwin  208 Sep 27 15:07 hello.sh
+-rwxr-xr-x. 1 pdorwin pdorwin  200 Sep 27 15:00 hello.sh~*
+-rw-r--r--. 1 pdorwin pdorwin 1473 Sep 27 15:07 #Readme.md#
+-rw-r--r--. 1 pdorwin pdorwin 1370 Sep 27 15:03 Readme.md
+-rw-r--r--. 1 pdorwin pdorwin  292 Sep 27 14:54 Readme.md~
+-rw-r--r--. 1 pdorwin pdorwin   93 Sep 27 14:59 *shell*<4>
+-rw-r--r--. 1 pdorwin pdorwin 2062 Sep 27 15:15 *shell*<5>
+-rw-r--r--. 1 pdorwin pdorwin 2992 Sep 27 15:10 *shell*<5>~
+
+pdorwin@bubba - 17-09-27-15.15.37.955593750
+=> /git/pdorwin/scripting/bash/01-HelloWorld
+-> ls
+hello.sh  hello.sh~*  Readme.md  Readme.md~  *shell*<4>  *shell*<5>  *shell*<5>~
+
+pdorwin@bubba - 17-09-27-15.15.45.406329612
+=> /git/pdorwin/scripting/bash/01-HelloWorld
+-> ls *~
+hello.sh~*  Readme.md~	*shell*<5>~
+
+pdorwin@bubba - 17-09-27-15.15.52.547680292
+=> /git/pdorwin/scripting/bash/01-HelloWorld
+-> rm *~
+
+pdorwin@bubba - 17-09-27-15.15.55.839828098
+=> /git/pdorwin/scripting/bash/01-HelloWorld
+-> ls
+hello.sh  Readme.md  *shell*<4>  *shell*<5>
+
+pdorwin@bubba - 17-09-27-15.15.56.836063650
+=> /git/pdorwin/scripting/bash/01-HelloWorld
+-> ls -1
+hello.sh
+Readme.md
+rm '*shell*<4>'
+*shell*<5>
+
+pdorwin@bubba - 17-09-27-15.16.12.835277684
+=> /git/pdorwin/scripting/bash/01-HelloWorld
+-> rm '*shell*<4>'
+
+pdorwin@bubba - 17-09-27-15.16.21.838148584
+=> /git/pdorwin/scripting/bash/01-HelloWorld
+-> ls -1
+hello.sh
+Readme.md
+*shell*<5>
+
+pdorwin@bubba - 17-09-27-15.16.23.967927990
+=> /git/pdorwin/scripting/bash/01-HelloWorld
+-> git status
+# On branch master
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   ../../README.md
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	../
+no changes added to commit (use "git add" and/or "git commit -a")
+
+pdorwin@bubba - 17-09-27-15.16.37.566705892
+=> /git/pdorwin/scripting/bash/01-HelloWorld
+-> git add .
+
+pdorwin@bubba - 17-09-27-15.16.52.201228871
+=> /git/pdorwin/scripting/bash/01-HelloWorld
+-> git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   *shell*<5>
+#	new file:   Readme.md
+#	new file:   hello.sh
+#
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   ../../README.md
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	../01-hello
+#	../01-hello~
+#	../README.md
+#	../README.md~
+
+pdorwin@bubba - 17-09-27-15.16.54.434285183
+=> /git/pdorwin/scripting/bash/01-HelloWorld
+-> cd ..
+
+pdorwin@bubba - 17-09-27-15.17.02.439808687
+=> /git/pdorwin/scripting/bash
+-> ls -1
+rm 01-hello 01-hello~
+01-HelloWorld/
+README.md
+README.md~
+
+pdorwin@bubba - 17-09-27-15.17.03.582514857
+=> /git/pdorwin/scripting/bash
+-> rm 01-hello 01-hello~
+
+pdorwin@bubba - 17-09-27-15.17.09.103885942
+=> /git/pdorwin/scripting/bash
+-> rm README.md~
+
+pdorwin@bubba - 17-09-27-15.17.13.712431297
+=> /git/pdorwin/scripting/bash
+-> git mv README.md Readme.md
+fatal: not under version control, source=bash/README.md, destination=bash/Readme.md
+
+pdorwin@bubba - 17-09-27-15.17.24.409300125
+=> /git/pdorwin/scripting/bash
+-> mv README.md Readme.md
+
+pdorwin@bubba - 17-09-27-15.17.37.538807903
+=> /git/pdorwin/scripting/bash
+-> ls
+01-HelloWorld/	Readme.md
+
+pdorwin@bubba - 17-09-27-15.17.38.276578003
+=> /git/pdorwin/scripting/bash
+-> cd ..
+
+pdorwin@bubba - 17-09-27-15.17.41.700842095
+=> /git/pdorwin/scripting
+-> ls
+bash/  emacs/  README.md
+
+pdorwin@bubba - 17-09-27-15.17.43.151089044
+=> /git/pdorwin/scripting
+-> git mv README.md Readme.md
+
+pdorwin@bubba - 17-09-27-15.17.52.465973030
+=> /git/pdorwin/scripting
+-> ls
+bash/  emacs/  Readme.md
+
+pdorwin@bubba - 17-09-27-15.18.11.455613112
+=> /git/pdorwin/scripting
+-> cd bash
+
+pdorwin@bubba - 17-09-27-15.18.13.463939865
+=> /git/pdorwin/scripting/bash
+-> ls
+01-HelloWorld/	Readme.md
+
+pdorwin@bubba - 17-09-27-15.18.14.095512208
+=> /git/pdorwin/scripting/bash
+-> cd 01-H*
+
+pdorwin@bubba - 17-09-27-15.18.18.892443680
+=> /git/pdorwin/scripting/bash/01-HelloWorld
+-> ls
+hello.sh  Readme.md  *shell*<5>
+
+pdorwin@bubba - 17-09-27-15.18.19.560196161
+=> /git/pdorwin/scripting/bash/01-HelloWorld
+-> cd ../..
+
+pdorwin@bubba - 17-09-27-15.19.45.881186933
+=> /git/pdorwin/scripting
+-> ls
+bash/  emacs/  Readme.md
+
+pdorwin@bubba - 17-09-27-15.19.46.753828920
+=> /git/pdorwin/scripting
+-> git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	renamed:    README.md -> Readme.md
+#	new file:   bash/01-HelloWorld/*shell*<5>
+#	new file:   bash/01-HelloWorld/Readme.md
+#	new file:   bash/01-HelloWorld/hello.sh
+#
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+git add   Readme.md   bash/01-HelloWorld/Readme.md
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	bash/Readme.md
+#	bash/Readme.md~
+
+pdorwin@bubba - 17-09-27-15.19.51.645073753
+=> /git/pdorwin/scripting
+-> rm bash/Readme.md~
+
+pdorwin@bubba - 17-09-27-15.20.02.067140362
+=> /git/pdorwin/scripting
+-> git add bash/Readme.md
+
+pdorwin@bubba - 17-09-27-15.20.05.082881288
+=> /git/pdorwin/scripting
+-> git add   Readme.md   bash/01-HelloWorld/Readme.md
+
+pdorwin@bubba - 17-09-27-15.20.27.703729871
+=> /git/pdorwin/scripting
+-> 
+
+pdorwin@bubba - 17-09-27-15.20.54.142142489
+=> /git/pdorwin/scripting
+-> git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	renamed:    README.md -> Readme.md
+#	new file:   bash/01-HelloWorld/*shell*<5>
+#	new file:   bash/01-HelloWorld/Readme.md
+#	new file:   bash/01-HelloWorld/hello.sh
+#	new file:   bash/Readme.md
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	bash/01-HelloWorld/*shell*<6>
+#	bash/01-HelloWorld/.#*shell*<6>
+
+pdorwin@bubba - 17-09-27-15.21.05.881092828
+=> /git/pdorwin/scripting
+-> 

@@ -1,0 +1,54 @@
+-> pwd
+/git/pdorwin/scripting/bash/01-HelloWorld
+
+##################################################################################################
+################################ Look at the contents of the file ################################
+##################################################################################################
+
+-> cat hello.sh
+#!/usr/bin/env bash
+
+################################################################
+#
+# main()
+{
+    declare    myName=$(basename $0)
+
+    printf "Hello %s, the name of this script is %s" $USER $myName
+}
+
+#####################################################################################
+################################ Execute the command ################################
+#####################################################################################
+
+-> ./hello.sh
+bash: ./hello.sh: Permission denied
+
+-> ls -l hello.sh # And look at the state of the file - not executable
+-rw-r--r--. 1 pdorwin pdorwin 200 Sep 27 15:00 hello.sh
+
+-> chmod +x hello.sh
+
+-> ls -l hello.sh # And now it is executeable
+-rwxr-xr-x. 1 pdorwin pdorwin 208 Sep 27 15:07 hello.sh*
+
+-> ./hello.sh
+Hello pdorwin, the name of this script is hello.sh
+pdorwin@bubba - 17-09-27-15.07.04.756834790             <==== I want a blank line above this line
+=> /git/pdorwin/scripting/bash/01-HelloWorld
+-> 
+###########################################################################################################################################
+################################ Notice how the Hello pdorwin does not have a blank line after it - fix it ################################
+###########################################################################################################################################
+
+-> cat hello.sh
+#!/usr/bin/env bash
+
+################################################################
+#
+# main()
+{
+    declare    myName=$(basename $0)
+
+    printf "Hello %s, the name of this script is %s\n" $USER $myName <==== there is a very subtle difference on this line can you find it?
+}
