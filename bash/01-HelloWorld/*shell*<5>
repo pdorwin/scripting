@@ -14,7 +14,7 @@
 {
     declare    myName=$(basename $0)
 
-    printf "Hello %s, the name of this script is %s" $USER $myName
+    printf "Hello %s, the name of this script is %s\n" $USER $myName
 }
 
 #####################################################################################
@@ -34,21 +34,4 @@ bash: ./hello.sh: Permission denied
 
 -> ./hello.sh
 Hello pdorwin, the name of this script is hello.sh
-pdorwin@bubba - 17-09-27-15.07.04.756834790             <==== I want a blank line above this line
-=> /git/pdorwin/scripting/bash/01-HelloWorld
--> 
-###########################################################################################################################################
-################################ Notice how the Hello pdorwin does not have a blank line after it - fix it ################################
-###########################################################################################################################################
 
--> cat hello.sh
-#!/usr/bin/env bash
-
-################################################################
-#
-# main()
-{
-    declare    myName=$(basename $0)
-
-    printf "Hello %s, the name of this script is %s\n" $USER $myName <==== there is a very subtle difference on this line can you find it?
-}
